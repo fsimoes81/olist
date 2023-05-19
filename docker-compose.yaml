@@ -22,7 +22,7 @@ services:
       - ./scripts/sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
   populate_db:
     build: .
-    restart: always
+    restart: "no"
     command: python -m populate_db
     volumes:
       - .:/code
