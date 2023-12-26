@@ -9,13 +9,13 @@ services:
       timeout: 5s
       retries: 5    
     expose:
-      -  "5432"
+      -  "${EXPOSED_PORT}"
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=pw1234
       - POSTGRES_DB=olist
     ports:
-      - "5432:5432"
+      - "${EXPOSED_PORT}:5432"
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
       # copy the sql script to create tables
