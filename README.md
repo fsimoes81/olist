@@ -35,6 +35,11 @@ You can change parameters in `docker-compose.yaml` file.
 
 **port:** The port mapped by Postgres is **5432** in your container. If you have other Postgres instances running, you have to change it.
 
+#### Port Config
+
+You can change the value of EXPOSED_PORT on .env file, in order to change de port that will be used to connect to Postgres.
+
 ### Run
 
 Clone or download this repository, and run `$ docker compose up`.
+
